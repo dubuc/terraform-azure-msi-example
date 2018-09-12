@@ -35,3 +35,16 @@ Deploy the Virtual Machine Scale Set on Azure.
 ```
 $ terraform apply "plan.out"
 ```
+
+You can now ssh into your VMs using the NAT Rules
+```
+Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+scaleset_publicip = xxx.xxx.xxx.xxx
+```
+For example, if instance is in NAT pool 50000:
+```
+$ ssh azureuser@xxx.xxx.xxx.xxx -p 50000
+```
