@@ -28,10 +28,10 @@ $ terraform init
 
 Plan the project.
 ```
-$ terraform plan
+$ terraform plan -out plan.out
 ```
 
 Deploy the Virtual Machine Scale Set on Azure.
 ```
-$ terraform apply
+$ terraform apply "plan.out"
 ```
