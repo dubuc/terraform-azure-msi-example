@@ -1,3 +1,5 @@
+provider "azurerm" {}
+
 resource "azurerm_resource_group" "test" {
   name     = "${var.prefix}"
   location = "East US 2"
